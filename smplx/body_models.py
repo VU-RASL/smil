@@ -2550,7 +2550,7 @@ class SMIL(nn.Module):
         vertices, joints = lbs(betas, full_pose, self.v_template,
                                self.shapedirs, self.posedirs,
                                self.J_regressor, self.parents,
-                               self.lbs_weights, pose2rot=pose2rot, dtype=self.dtype)
+                               self.lbs_weights, pose2rot=pose2rot)
 
         joints = self.vertex_joint_selector(vertices, joints)
         # Map the joints to the current dataset
